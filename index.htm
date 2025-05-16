@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover" />
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <div style="padding:5px">
+        
+
+
+<link href="/CMS.css" rel="stylesheet" />
+<style>
+    #tblDetail th {
+        width: 8em;
+    }
+</style>
+
+<table id="tblDetail" border="1" cellpadding="0" cellspacing="0" class="SearchResultTable" style="width:100%;">
+    <caption>合同详细信息（编号：2211003806）</caption>
+    <tbody>
+        <tr>
+            <th><label for="BargainType">合同类型</label></th>
+            <td>期房合同</td>
+        </tr>
+        <tr>
+            <th><label for="BargainDate">签订时间</label></th>
+            <td>2024-10-18</td>
+        </tr>
+        <tr>
+            <th><label for="Seller">出卖人</label></th>
+            <td>烟台市芝罘区鸿璟房地产开发有限公司</td>
+        </tr>
+        <tr>
+            <th><label for="Buyer">买受人</label></th>
+            <td>姜维克</td>
+        </tr>
+        <tr>
+            <th><label for="Address">房屋地址</label></th>
+            <td>芝罘区烟台芝罘吾悦广场吾悦首府5#商住楼1单元1902号</td>
+        </tr>
+        <tr>
+            <th><label for="Area">建筑面积</label></th>
+            <td><span>112.87</span>平方米</td>
+        </tr>
+        <tr>
+            <th><label for="Price">成交价格</label></th>
+            <td>1216738.6元(大写:壹佰贰拾壹万陆仟柒佰叁拾捌圆陆角)</td>
+        </tr>
+        <tr>
+            <th><label for="Price1">第一次付款金额</label></th>
+            <td>657038.84</td>
+        </tr>
+        <tr>
+            <th><label for="HTPrice">商品房总价款</label></th>
+            <td>1216738.6元(大写:壹佰贰拾壹万陆仟柒佰叁拾捌圆陆角)</td>
+        </tr>
+        <tr>
+            <th><label for="Price1Time">第一次付款时间</label></th>
+            <td>2024-10-18</td>
+        </tr>
+        <tr>
+            <th><label for="RecordTime">备案时间</label></th>
+            <td>2024-10-20</td>
+        </tr>
+        <tr>
+            <th style="color:red;">当前时间</th>
+            <td id="txt_current_time"></td>
+        </tr>
+    </tbody>
+</table>
+    </div>
+	<script>
+const now = new Date();
+
+const year = now.getFullYear(); // 年（4位数）
+const month = String(now.getMonth() + 1); // 月（0-11，需+1）
+const day = String(now.getDate()); // 日
+const hours = String(now.getHours()).padStart(2, '0'); // 时
+const minutes = String(now.getMinutes()).padStart(2, '0'); // 分
+const seconds = String(now.getSeconds()).padStart(2, '0'); // 秒
+
+// 组合成格式：YYYY-MM-DD HH:MM:SS
+const datetime = `${year}/${month}/${day} ${hours}:${minutes}:${seconds}`;
+console.log(datetime); // 示例输出：2023-09-15 14:30:45
+document.getElementById("txt_current_time").innerHTML=datetime;
+	</script>
+</body>
+</html>
